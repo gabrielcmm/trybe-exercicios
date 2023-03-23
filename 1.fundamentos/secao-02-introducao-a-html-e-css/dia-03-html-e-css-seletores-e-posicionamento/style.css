@@ -12,26 +12,44 @@ h1, h2, h3, h4, h5, h6{
     color: red;
 }
 
-ul.websites li:nth-child(1):hover{
-    background-color: orange;
+h1 em, h2 em, h3 em, h4 em h5 em h6 em{
+    font-size: 90px;
+    border: 1px solid black;
 }
-ul.websites li:nth-child(2):hover{
-    background-color: green;
+
+li{
+    font-size: 20px;
 }
-ul.websites li:nth-child(3):hover{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-ul.websites li:nth-child(4):hover{
-    background-color: yellow;
-}
-ul.websites li:nth-child(5):hover{
-    background-color: green;
+
+li em{
+    font-weight: bold;
 }
 
 ul.languages li:nth-child(-n+3){
-    background-color: red;
+    color: blue;
     
+}
+/*  contém texto JAVA */
+
+ul.websites li:nth-child(1):hover{
+    background-color: orange;
+}
+
+ul.websites li:nth-child(2):hover{
+    background-color: green;
+}
+
+ul.websites li:nth-child(3):hover{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+ul.websites li:nth-child(4):hover{
+    background-color: yellow;
+}
+
+ul.websites li:nth-child(5):hover{
+    background-color: green;
 }
 
