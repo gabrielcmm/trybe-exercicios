@@ -1,38 +1,37 @@
-body{
+
+ol li:nth-of-type(odd){
+    background-color: yellow;
+    text-transform: uppercase;
+}
+
+ol li:nth-of-type(even){
+    background-color: green;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: red;
+}
+
+ul.websites li:nth-child(1):hover{
+    background-color: orange;
+}
+ul.websites li:nth-child(2):hover{
+    background-color: green;
+}
+ul.websites li:nth-child(3):hover{
+    background-color: black;
     color: white;
+    text-decoration: none;
+}
+ul.websites li:nth-child(4):hover{
+    background-color: yellow;
+}
+ul.websites li:nth-child(5):hover{
+    background-color: green;
 }
 
-div:hover{
-    border: 1px solid red;
+ul.languages li:nth-child(-n+3){
+    background-color: red;
+    
 }
 
-h1, h3{
-    font-style: italic;
-}
-
-.color1{
-    background-color: #96d765;
-}
-
-.color2{
-    background-color: #67b1dd;
-}
-
-.color3{
-    background-color: #e35f6e;
-}
-.color4{
-    background-color: #1621bd;
-}
-
-.color5{
-    background-color: lightsalmon;
-}
-
-.fonte_preta{
-    color: black;
-}
-
-.fonte_salmao{
-    color: salmon;
-}
