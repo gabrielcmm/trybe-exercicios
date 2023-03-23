@@ -1,10 +1,10 @@
 
-ol li:nth-of-type(odd){
+ol li:nth-child(odd){
     background-color: yellow;
     text-transform: uppercase;
 }
 
-ol li:nth-of-type(even){
+ol li:nth-child(even){
     background-color: green;
 }
 
@@ -29,10 +29,12 @@ ul.languages li:nth-child(-n+3){
     color: blue;
     
 }
+
 /*  contém texto JAVA */
 
 ul.websites li:nth-child(1):hover{
     background-color: orange;
+    text-decoration: none;
 }
 
 ul.websites li:nth-child(2):hover{
