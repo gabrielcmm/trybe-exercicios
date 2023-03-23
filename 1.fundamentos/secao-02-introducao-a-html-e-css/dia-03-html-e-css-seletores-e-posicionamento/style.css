@@ -1,85 +1,14 @@
-.caixa {
-    color: white;
-    display: inline-block;
-    line-height: 50px;
+h1, p{
     text-align: center;
-    vertical-align: top;
-  }
-  
-  .width-and-height {
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
-  .padding {
-    padding: 20px;
-  }
-  
-  /* insira na classe abaixo uma margem de 30px para aplicá-la aos itens C e D */
-  .margin {
-    margin: 30px;
-  
-  }
-  
-  /* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
-  .border {
-    border: 5px solid black;
-    
-  }
+}
 
-  .verde{
-    background-color: #036b52;
-  }
+li:hover{
+    background-color: seagreen;
+    padding: 3px;
+    border-radius: 20px;
+}
 
-  .roxo{
-    background: #41197f;
-  }
-
-  .chumbo{
-    background: #444955;
-  }
-
-  .azul{
-    background: #3898EC;
-  }
-
-  /* Exercicio 2 */
-
-  .super-mario {
-    position: absolute;
-    z-index: 1;
-    left: 200px;
-    width: 200px;
-  }
-  
-  .goomba {
-    position: absolute;
-    z-index: 1;
-    top: 560px;
-    left: 260px;
-    width: 100px;
-  }
-  
-  .baloon {
-    position: absolute;
-    top: 450px;
-    left: 600px;
-  }
-  
-  .speach {
-    position: absolute;
-    font-size: 25px;
-    top: 490px;
-    left: 625px;
-    z-index: 4;
-
-  }
-  
-  .bowser {
-    position: absolute;
-    z-index: 4;
-    width: 200px;
-    left: 900px;
-    top: 560px
-  }
+li:active{
+    font-family: monospace;
+    transition: ease-in-out;
+}
