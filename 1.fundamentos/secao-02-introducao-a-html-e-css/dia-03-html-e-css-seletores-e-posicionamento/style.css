@@ -1,14 +1,38 @@
-h1, p{
-    text-align: center;
+body{
+    color: white;
 }
 
-li:hover{
-    background-color: seagreen;
-    padding: 3px;
-    border-radius: 20px;
+div:hover{
+    border: 1px solid red;
 }
 
-li:active{
-    font-family: monospace;
-    transition: ease-in-out;
+h1, h3{
+    font-style: italic;
+}
+
+.color1{
+    background-color: #96d765;
+}
+
+.color2{
+    background-color: #67b1dd;
+}
+
+.color3{
+    background-color: #e35f6e;
+}
+.color4{
+    background-color: #1621bd;
+}
+
+.color5{
+    background-color: lightsalmon;
+}
+
+.fonte_preta{
+    color: black;
+}
+
+.fonte_salmao{
+    color: salmon;
 }
