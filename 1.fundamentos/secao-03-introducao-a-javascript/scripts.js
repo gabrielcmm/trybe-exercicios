@@ -1,6 +1,6 @@
-let myName = "Gabriel";
-let birthCity = "Fortaleza";
-let birthYear = `${myName} +  nasceu em 1994.`;
-console.log(`Nome: ${myName}`);
-console.log(`Cidade Natal: ${birthCity}`);
-console.log(birthYear);
+let base = 5;
+let height = 8;
+let area = base * height;
+console.log(area);
+let perimeter = base * 2 + height * 2;
+console.log(perimeter);
