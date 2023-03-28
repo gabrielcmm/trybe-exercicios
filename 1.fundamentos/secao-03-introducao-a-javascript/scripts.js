@@ -1,10 +1,23 @@
-let rating = 61;
-if (rating >= 80 && rating <= 100) {
-  console.log("Parabéns, você faz parte do grupo de pessoas aprovadas!");
-} else if (rating < 80 && rating >= 60) {
-  console.log("Você está na lista de espera!");
-} else if (rating < 60 && rating >= 1) {
-  console.log("Infelizmente você foi reprovado!");
-} else {
-  console.log("Informação inválida");
+function rodarSwitchCase(status) {
+  switch (status) {
+    case "aprovada":
+      console.log("Parabéns, você está no grupo de pessoas aprovadas!");
+      break;
+
+    case "lista":
+      console.log("Você está na nossa lista de espera.");
+      break;
+
+    case "reprovada":
+      console.log("Infelizmente, você reprovou.");
+      break;
+
+    default:
+      console.log("Informação Incorreta");
+  }
 }
+
+rodarSwitchCase("aprovada");
+rodarSwitchCase("lista");
+rodarSwitchCase("reprovada");
+rodarSwitchCase("red");
