@@ -1,25 +1,35 @@
 let clientesTrybeBank = ["Ada", "John", "Gus"];
 
-function newClient(nome) {
-  if (typeof nome === "string") {
-    clientesTrybeBank.push(nome);
-  } else {
-    return "Nome inválido";
+function clientExists(nome) {
+  for (const cliente of clientesTrybeBank) {
+    if (cliente === nome) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
-newClient("Gabriel");
-newClient("Júlia");
-console.table(clientesTrybeBank);
-removeClient("Gabriel");
-console.table(clientesTrybeBank);
 
-function removeClient(nome) {
-  if (typeof nome === "string") {
-    if (clientesTrybeBank.includes(nome)) {
-      clientesTrybeBank.splice(clientesTrybeBank.indexOf(nome), 1);
-      return `Remoção do Cliente: ${nome}`;
+function clienteIsValid(cliente) {
+  if (typeof cliente === "string") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function removeCliente(cliente) {
+  if (clienteIsValid) {
+    if (clientExists(cliente)) {
+      let indexCliente = clientesTrybeBank.indexOf(cliente);
+      clientesTrybeBank.splice(indexCliente, 1);
+      return `Cliente ${cliente} removido com sucesso!`;
+    } else {
+      return `Cliente ${cliente} não existe no sistema!`;
     }
   } else {
-    return "Nome inválido";
+    return 'O parâmetro passado deve ser do tipo "string"!';
   }
 }
+let nome = true;
+console.log(removeCliente(nome));
