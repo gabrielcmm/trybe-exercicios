@@ -68,3 +68,21 @@ function printTriangle(number) {
 
 printTriangle(5);
 console.log("");
+
+function printInverseTriangle(number) {
+  let linePrint = "";
+  let lineCount = 0;
+  let baseNumber = number;
+  for (let index = 1; index <= number; index++) {
+    while (lineCount < number - 1) {
+      linePrint = linePrint + " ";
+      lineCount++;
+    }
+    linePrint = linePrint + "*";
+    console.log(linePrint);
+    linePrint = "";
+    lineCount = index;
+  }
+}
+
+printInverseTriangle(5);
