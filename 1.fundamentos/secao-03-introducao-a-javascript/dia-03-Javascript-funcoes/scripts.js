@@ -21,7 +21,7 @@ function clienteIsValid(cliente) {
 function removeCliente(cliente) {
   if (clienteIsValid) {
     if (clientExists(cliente)) {
-      let indexCliente = clientesTrybeBank.indexOf(cliente);
+      const indexCliente = clientesTrybeBank.indexOf(cliente);
       clientesTrybeBank.splice(indexCliente, 1);
       return `Cliente ${cliente} removido com sucesso!`;
     } else {
