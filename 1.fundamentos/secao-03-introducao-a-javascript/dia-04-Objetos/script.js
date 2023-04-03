@@ -1,12 +1,23 @@
-let student = {};
+let student1 = {
+  html: "Muito Bom",
+  css: "Bom",
+  javascript: "Ótimo",
+  softskills: "Ótimo",
+};
 
-function addProperty(whichArray, whichProperty, whichValue) {
-  whichArray[whichProperty] = whichValue;
+let student2 = {
+  html: "Bom",
+  css: "Ótimo",
+  javascript: "Ruim",
+  softskills: "Ótimo",
+  git: "Bom", // chave adicionada
+};
+
+function listSkills(student) {
+  let arrayOfSkills = Object.keys(student);
+  for (const key in arrayOfSkills) {
+    console.log(`${arrayOfSkills[key]}, Nível ${student[arrayOfSkills[key]]}`);
+  }
 }
 
-addProperty(student, "firstName", "Gabriel");
-addProperty(student, "lastName", "Martins");
-addProperty(student, "phone", "(85) 95555-5555");
-addProperty(student, "mail", "gabriel@trybestudent.com");
-
-console.table(student);
+listSkills(student1);
