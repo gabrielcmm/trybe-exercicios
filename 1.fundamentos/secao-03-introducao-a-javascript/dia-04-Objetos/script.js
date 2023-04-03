@@ -1,23 +1,13 @@
-let student1 = {
-  html: "Muito Bom",
-  css: "Bom",
-  javascript: "Ótimo",
-  softskills: "Ótimo",
+let band = {
+  name: "Blind Guardian",
+  formedIn: 1986,
+  lastAlbum: "Beyond the Red Mirror",
 };
 
-let student2 = {
-  html: "Bom",
-  css: "Ótimo",
-  javascript: "Ruim",
-  softskills: "Ótimo",
-  git: "Bom", // chave adicionada
+let info = {
+  genre: "Power Metal",
+  lastAlbum: "Twilight Orchestra: Legacy of the Dark Lands",
 };
 
-function listSkills(student) {
-  let arrayOfSkills = Object.keys(student);
-  for (const key in arrayOfSkills) {
-    console.log(`${arrayOfSkills[key]}, Nível ${student[arrayOfSkills[key]]}`);
-  }
-}
-
-listSkills(student1);
+Object.assign(band, info);
+console.log(band);
