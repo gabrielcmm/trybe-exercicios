@@ -1,65 +1,64 @@
-let order = {
-  name: "Rafael Andrade",
-  phoneNumber: "11-98763-1416",
-  address: {
-    street: "Rua das Flores",
-    number: "389",
-    apartment: "701",
-  },
-  order: {
-    pizza: {
-      marguerita: {
-        amount: 1,
-        price: 25,
-      },
-      pepperoni: {
-        amount: 1,
-        price: 20,
-      },
-    },
-    drinks: {
-      coke: {
-        type: "Coca-Cola Zero",
-        price: 10,
-        amount: 1,
-      },
-    },
-    delivery: {
-      deliveryPerson: "Ana Silveira",
-      price: 5,
-    },
-  },
-  payment: {
-    total: 60,
-  },
+let lesson1 = {
+  materia: "Matemática",
+  numeroEstudantes: 20,
+  professor: "Maria Clara",
+  turno: "manhã",
 };
 
-function customerInfo(order) {
-  // Adicione abaixo as informações necessárias.
-  //'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701'
-  console.log(
-    `Olá ${order.order.delivery.deliveryPerson}, entrega para ${order.name}, Telefone: ${order.phoneNumber}, Endereço: ${order.address.street}, # ${order.address.number}, Apt: ${order.address.apartment}`
-  );
+let lesson2 = {
+  materia: "História",
+  numeroEstudantes: 20,
+  professor: "Carlos",
+};
+
+let lesson3 = {
+  materia: "Matemática",
+  numeroEstudantes: 10,
+  professor: "Maria Clara",
+  turno: "noite",
+};
+
+function addProperty(whichLesson, whichProperty, whichValue) {
+  whichLesson[whichProperty] = whichValue;
 }
 
-customerInfo(order);
+addProperty(lesson2, "turno", "noite");
+//console.table(lesson2);
 
-function orderModifier(order) {
-  // Adicione abaixo as informações necessárias.
-  //'Olá, Luiz Silva, o valor total de seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00.'
-  order.name = "Luiz Silva";
-  order.payment.total = 50;
-  let pedido = "";
-  for (key in order.order.pizza) {
-    pedido = pedido + key + ", ";
-  }
-  for (key in order.order.drinks) {
-    pedido = pedido + order.order.drinks[key].type;
-  }
-  console.log(pedido);
-  console.log(
-    `Olá ${order.name}, o valor total do seu pedido de ${pedido} é ${order.payment.total}`
-  );
+function listKeys(whichLesson) {
+  return Object.keys(whichLesson);
 }
 
-orderModifier(order);
+//console.log(listKeys(lesson2));
+
+function objectSize(whichLesson) {
+  return Object.keys(whichLesson).length;
+}
+//console.log(objectSize(lesson2));
+
+function listValues(whichLesson) {
+  return Object.values(whichLesson);
+}
+
+// console.log(listValues(lesson2));
+
+function listLessons(l1, l2, l3) {
+  let allLessons = {};
+  Object.assign(allLessons, {
+    lesson1: l1,
+    lesson2: l2,
+    lesson3: l3,
+  });
+
+  return allLessons;
+}
+
+let allLessons = listLessons(lesson1, lesson2, lesson3);
+
+function studentByLesson(lessons) {
+  for (const key in lessons) {
+    console.log(lessons.key.materia);
+  }
+}
+
+console.log(studentByLesson(allLessons));
