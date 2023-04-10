@@ -9,20 +9,20 @@
   <body>
     <header>
       <h2 id="page-title">Título</h2>
-      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <p id="paragraph" class="main-Paragraph">
+        Dê uma cor para este parágrafo!
+      </p>
       <h4 id="subtitle">Subtítulo</h4>
-      <p id="second-paragraph">Segundo parágrafo!</p>
+      <p id="second-paragraph" class="main-Paragraph">Segundo parágrafo!</p>
     </header>
     <script>
       const paragraph = document.getElementById("paragraph");
-      const pageTitle = document.getElementById("page-title");
-      const secondParagraph = document.getElementById("second-paragraph");
-      const subtitle = document.getElementById("subtitle");
       paragraph.style.color = "red";
-      pageTitle.innerText = "Modern Family";
-      secondParagraph.innerText =
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quod illo aut neque reiciendis aperiam sit, harum recusandae provident ad, cupiditate quos quis? Eligendi delectus quis velit, est et corrupti!";
-      subtitle.innerHTML = "Mudança <strong><em>IMPORTANTE</em></strong>";
+      const paragraphs = document.getElementsByClassName("main-Paragraph");
+      paragraphs[0].style.fontSize = "60px";
+      paragraphs[0].style.color = "red";
+      const subtitle = document.getElementsByTagName("h4");
+      subtitle[0].style.color = "rgb(170, 51, 106)";
     </script>
   </body>
 </html>
