@@ -25,3 +25,5 @@ console.log(
   document.getElementsByClassName("elementoBisneto")[0].parentElement
     .parentElement.nextElementSibling
 );
+
+elementoOndeVoceEsta.removeChild();
