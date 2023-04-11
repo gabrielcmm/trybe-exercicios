@@ -1,11 +1,27 @@
 // arquivo script.js
-const whereAreYou = document.getElementById("where-are-you");
-const parent = document.getElementById("parent");
+const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
 
-whereAreYou.parentElement.style.color = "red";
-whereAreYou.firstElementChild.innerText = "First Child Of";
+const paiOndeVoceEsta = elementoOndeVoceEsta.parentElement;
+console.log(paiOndeVoceEsta);
 
-//First Child a partir de Where Are You
-console.log(whereAreYou.parentNode.firstElementChild);
-console.log(parent.firstElementChild);
-console.log(whereAreYou.parentElement.parentElement.textContent);
+let irmaoOndeVoceEsta = document.createElement("section");
+irmaoOndeVoceEsta.innerHTML = "Irmão Onde Você está!";
+paiOndeVoceEsta.appendChild(irmaoOndeVoceEsta);
+console.log(irmaoOndeVoceEsta);
+
+let filhoOndeVoceEsta = document.createElement("section");
+filhoOndeVoceEsta.innerText = "Filho onde você está";
+elementoOndeVoceEsta.appendChild(filhoOndeVoceEsta);
+
+const primeiroNeto = elementoOndeVoceEsta.firstElementChild;
+
+let primeiroBisneto = document.createElement("section");
+primeiroBisneto.innerText = "Primeiro Bisneto";
+primeiroBisneto.className = "elementoBisneto";
+primeiroBisneto.id = "idDoBisneto";
+primeiroNeto.appendChild(primeiroBisneto);
+
+console.log(
+  document.getElementsByClassName("elementoBisneto")[0].parentElement
+    .parentElement.nextElementSibling
+);
