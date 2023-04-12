@@ -4,21 +4,132 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <main id="paiDoPai">
-      <section id="pai">
-        <section id="primeiroFilho"></section>
-        <section id="elementoOndeVoceEsta">
-          <section id="primeiroFilhoDoFilho"></section>
-          <section id="segundoEUltimoFilhoDoFilho"></section>
-        </section>
-        Atenção!
-        <section id="terceiroFilho"></section>
-        <section id="quartoEUltimoFilho"></section>
-      </section>
-    </main>
-    <script src="script.js"></script>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      const body = document.getElementsByTagName("body")[0];
+
+      const h1Tag = document.createElement("h1");
+
+      h1Tag.innerText = "TrybeTrip - Agência de Viagens";
+      body.appendChild(h1Tag);
+
+      const main = document.createElement("main");
+      main.classList.add("main-content");
+      body.appendChild(main);
+
+      const section = document.createElement("section");
+      section.classList.add("center-content");
+      main.appendChild(section);
+
+      const paragraph = document.createElement("p");
+      paragraph.innerText = "Conteúdo Importante!";
+      section.appendChild(paragraph);
+
+      const leftSection = document.createElement("section");
+      leftSection.classList.add("left-content");
+      main.appendChild(leftSection);
+
+      const rightSection = document.createElement("section");
+      rightSection.classList.add("right-content");
+      main.appendChild(rightSection);
+
+      const smallImage = document.createElement("img");
+      smallImage.classList.add("small-image");
+      smallImage.src = "https://picsum.photos/200";
+      leftSection.appendChild(smallImage);
+
+      const orderedList = document.createElement("ul");
+      rightSection.appendChild(orderedList);
+      let numbers = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      for (const number of numbers) {
+        const listItem = document.createElement("li");
+        listItem.innerText = number;
+        orderedList.appendChild(listItem);
+      }
+
+      const h3Tag1 = document.createElement("h1");
+      const h3Tag2 = document.createElement("h1");
+      const h3Tag3 = document.createElement("h1");
+      h3Tag1.innerText = "TrybeTrip";
+      h3Tag2.innerText = "TrybeTrip";
+      h3Tag3.innerText = "TrybeTrip";
+      h3Tag1.classList.add("description");
+      h3Tag2.classList.add("description");
+      h3Tag3.classList.add("description");
+      main.appendChild(h3Tag1);
+      main.appendChild(h3Tag2);
+      main.appendChild(h3Tag3);
+
+      h1Tag.classList.add("title");
+      main.removeChild(leftSection);
+      rightSection.style.marginRight = "auto";
+      section.style.backgroundColor = "green";
+      orderedList.removeChild(orderedList.lastElementChild);
+      orderedList.removeChild(orderedList.lastElementChild);
+    </script>
   </body>
 </html>
