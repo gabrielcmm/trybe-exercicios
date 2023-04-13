@@ -18,7 +18,7 @@ const addTechCSS = (element) => {
 
 firstLi.addEventListener("click", addTechCSS);
 secondLi.addEventListener("click", addTechCSS);
-thirdLi.addEventListener("click", addTechCSS);
+thirdLi.addEventListener(`click`, addTechCSS);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech'.
