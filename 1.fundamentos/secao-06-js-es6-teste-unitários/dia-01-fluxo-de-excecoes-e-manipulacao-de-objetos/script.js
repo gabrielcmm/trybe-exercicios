@@ -68,9 +68,7 @@ const checkPromo = (number) => {
 
 const checkValidRange = (number) => {
   if (promo[number] === undefined) {
-    throw new Error(
-      `O número informado não retorna nenhuma promoção! Informe um número de 1 à ${promo.length}`
-    );
+    throw new Error(`O número informado não retorna nenhuma promoção! Informe um número de 1 à ${promo.length}`);
   } else {
     return true;
   }

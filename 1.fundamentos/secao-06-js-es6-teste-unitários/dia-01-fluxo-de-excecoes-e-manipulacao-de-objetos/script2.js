@@ -103,8 +103,7 @@ const findPersonByName = (name) => {
         result = `Destinatário: ${client.name}. Endereço: ${client.address.street}, ${client.address.number}, ${client.address.city} - ${client.address.state}. CEP: ${client.address.cep}.`;
       }
     }
-    if (result === undefined)
-      throw new Error('Pessoa não encontrada, tente novamente');
+    if (result === undefined) throw new Error('Pessoa não encontrada, tente novamente');
   } catch (error) {
     result = error.message;
   } finally {
@@ -118,9 +117,7 @@ const findPersonByPosition = (position) => {
     if (clients[position - 1] === undefined) {
       throw new Error('Posição inválida, tente novamente');
     }
-    result = `Cliente: ${clients[position - 1].name}. email: ${
-      clients[position - 1].email
-    }`;
+    result = `Cliente: ${clients[position - 1].name}. email: ${clients[position - 1].email}`;
   } catch (error) {
     result = error.message;
   }
